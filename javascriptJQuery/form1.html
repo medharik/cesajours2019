@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>cours jquery (frameword js) / javascript</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="validation.js"></script>
+</head>
+<body>
+    
+<div class="row">
+    <div class="input-field col s6 push-s3">
+        <input class="validate" required type="text" name="np" id="np">
+        <label for="np"> Entrer votre Nom & prénom  </label>
+    
+    <div class="helper-text" data-error="Nom non valide" data-success="nom valide"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col s6 push-s3">
+        <input onblur="validernp()" class="validate" required type="text" name="email" id="email">
+        <label for="email"> Entrer votre email  </label>
+    
+    <div class="helper-text" data-error="Email non valide" data-success="Email valide"></div>
+    </div>
+</div>
+
+
+<div class="row">
+    <button onclick="validernp()" class="waves-effect waves-light btn blue col s6 push-s3">Valider <i class="material-icons right">send</i></button></div>
+
+
+    <div id="erreur" class="white-text red lighten-3">
+        
+    </div>
+</body>
+</html>

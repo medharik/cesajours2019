@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>formulaires </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <nav class="blue darken-4">
+                <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo">Logo</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                  </ul>
+                </div>
+              </nav>
+            
+              <ul class="sidenav" id="mobile-demo">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+              </ul>
+              <br>
+<div class="container grey lighten-3">
+    <div class="row">
+        <div class="col s4 " align="center">
+                <i class="material-icons large">contact_phone</i> <br>
+                <div>
+                    Tel: 0656565656
+                </div>
+        </div>
+        <div class="col s4 " align="center">
+                <i class="material-icons large">contact_mail</i> <br>
+                <div>
+                    Email: 0656565656
+                </div>
+        </div>
+        <div class="col s4 " align="center">
+                <i class="material-icons large">location_city</i> <br>
+                <div>
+                    Adresse : Lorem, ipsum dolor sit amet 
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7957.656254588331!2d15.285947075895397!3d-4.253666842828856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a333c673e4459%3A0x1e0763f20bd1a280!2sRue+Mbochi%2C+Brazzaville%2C+R%C3%A9publique+du+Congo!5e0!3m2!1sfr!2sma!4v1543502737091" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+
+<div class="container grey lighten-3 white-text">
+
+    <form action="">
+    <div class="row">
+        <div class="input-field col s6">
+        <input type="text" name="nom" id="nom" required class="validate" >
+        <label for="nom">nom:</label>
+        <div class="helper-text"  data-error="Nom obligatoire" data-success="Nom correct"> Champs obligatoire</div>
+        </div>
+
+        <div class="input-field col s6">
+                <input type="text" name="prenom" id="prenom" >
+                <label for="prenom">prenom:</label>
+                </div>
+
+    </div>
+    <div class="row">
+            <div class="input-field col s12">
+                    <input type="email" name="email" id="email" >
+                    <label for="email">email:</label>
+                    <div class="helper-text"></div>
+                    </div>
+
+             
+
+
+    </div>
+
+    <div class="row">
+        <div class="col s6"> 
+            <input type="password" name="anas" id="lilian" placeholder="mot de passe">
+            
+        </div>
+
+    <div class="col s6"> 
+            <input type="password" name="anas" id="chihab" placeholder="confirmation du mot de passe" class="validate" required>
+            
+        </div>
+    </div>
+   
+<div class="row">
+ <div class="col s12 input-field">
+<textarea name="adresse" id="adresse" cols="30" rows="10"  class="materialize-textarea"></textarea>
+<label for="adresse">Adresse : </label>
+ </div>
+
+</div>
+
+<div class="row">
+    <div class="col s12 m6 push-s3 push-m4">
+      <div class="purple-text">  Couleurs preferees :</div>
+        <div class="col s6  ">
+                <label>
+                        <input type="radio" name="red" id="red" value="rouge" />
+                        <span>Rouge</span>
+                      </label>
+        </div>
+        <div class="col s6">
+                <label>
+                        <input type="radio" name="red" id="vert" value="vert" />
+                        <span>Vert</span>
+                      </label>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+        <div class="col s12 input-field">
+            <select name="ville" id="ville" multiple>
+                <option value="casa">Casablanca</option>
+                <option value="rabat">Rabat</option>
+                <option value="" selected disabled>Choisissez une ville</option>
+            </select>
+            <label for="ville">Ville :</label>
+        </div>
+    </div>
+
+        <div class="row">
+                <div class="input-field col s12 ">
+                       <button class="btn col s6 push-s3  orange darken-2">Valider   <i class="material-icons  right">add</i></button>
+
+                    </div>
+  
+    
+                 
+        </div>
+
+      
+        </form>
+</div>
+
+    <script>
+            $(document).ready(function(){
+                $('select').formSelect();
+              });
+
+    </script>
+</body>
+</html>
