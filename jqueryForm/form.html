@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>validation jquery </title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="form.js"></script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="erreur" class="red-text center" ></div>
+  <div class="container">
+      <div class="row">
+          <div class="col s10 push-s1 b">
+<form action="destination.html" id="f">
+    <div class="input-field">
+        <input type="email" name="email" id="email" required class="validate">
+        <label for="email">Email :</label>
+        <div  id="erremail" class="helper-text" data-error="Email incorrect" data-success="Email valide"></div>
+    </div>
+<div class="row">
+    <div class="col l6">
+
+            <div class="input-field">
+                    <input type="password" name="passe" id="passe" required class="validate">
+                    <label for="passe">Mot de passe :</label>
+                    <div id="errpasse" class="helper-text" data-error="passe requis" data-success="mot de passe ok"></div>
+                </div>
+        
+    </div>
+
+    <div class="col l6">
+
+            <div class="input-field">
+                    <input type="password" name="c" id="c" required class="validate">
+                    <label for="c">confirmation du Mot de passe :</label>
+                   </div>
+        
+    </div>
+</div>
+
+<div class="row">
+    <button type="button"  id="ok" class="btn orange col s6 push-s3" >Valider</button>
+
+</div>
+</form>
+
+          </div>
+          
+      </div>
+  </div>
+
+
+  <script>
+    $(function(){
+$('#ok').click(function(){
+    $('#erreur').html("");
+if($('#email').val()==""){
+$('#erreur').html("<h3>erreur , email obligatoire</h3>");
+}
+if($('#passe').val()==""){
+    $('#erreur').append("<h3>erreur , mot de passe obligatoire</h3>");
+    }   
+    if($('#erreur').html()==""){
+        $('#f').submit();
+        }
+});
+     
+
+    });
+  </script>
+    
+</body>
+</html>
