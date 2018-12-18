@@ -11,13 +11,13 @@
 <div id="erreur"></div>
     <form action="">
         <input type="text" id="cin" name="cin" placeholder="Entrer cin"><br>
-        <input type="text" id="datepermis" name="permis" placeholder="Entrer Date permis">
+        <input type="date" id="datepermis" name="permis" placeholder="Entrer Date permis">
 
 
         <button id="ok" type="button" onclick="validerTout()" >Valider</button>
         
     </form>
-    1 à 5 chiffre - 1 lettre - 2 chiffres au max  
+    1 à 5 chiffres - 1 lettre - 2 chiffres au max  
 date  2c/2c/4c
 N permis : 2c/6c
 
@@ -35,8 +35,10 @@ N permis : 2c/6c
         function validerDate(){
 
             c=$('#datepermis').val();
-           m=/^[0-9]{2}[-/]{1}[0-9]{2}[/-]{1}[0-9]{4}$/
-           if(!m.test(c)){
+           m1=/^[0-9]{2}[-/]{1}[0-9]{2}[/-]{1}[0-9]{4}$/;
+           m2=/^[0-9]{4}[-/]{1}[0-9]{2}[/-]{1}[0-9]{2}$/;
+           
+           if(!m1.test(c) && !m2.test(c)){
               // alert('cin non valide');
               $('#erreur').append('Date  non valide<br>');
            }
