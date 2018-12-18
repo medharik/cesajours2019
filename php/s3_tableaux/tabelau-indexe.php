@@ -1,6 +1,7 @@
 <?php
 //creation d'un tableau indexés (numeroté de à)
 $produits=array("hp", "dell","sony","mac air");
+
 $produits[]="ACER";// pour ajoute un element la fin du tableau
 //unset($produits[0]); pour supprimer un element du tableau
 
