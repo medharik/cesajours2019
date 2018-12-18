@@ -1,7 +1,8 @@
 <?php
+//creation d'un tableau indexés (numeroté de à)
 $produits=array("hp", "dell","sony","mac air");
-$produits[]="ACER";
-//unset($produits[0]);
+$produits[]="ACER";// pour ajoute un element la fin du tableau
+//unset($produits[0]); pour supprimer un element du tableau
 
 ?>
 <!DOCTYPE html>
@@ -19,8 +20,10 @@ $produits[]="ACER";
 <div class="col-sm-6">
 <ul  class="list-group">
 <li class="list-group-item active "> listes des produits</li>
+<!--Boucle foreach pour pqrcourir  tableau  $produit, $c represente les cles , $v les valeurs 
+-->
 <?php foreach($produits as $c => $v) { ?>
-
+<!-- exemple de condition -->
 <?php if($v !="sony"){ ?>
 
 <li  class="list-group-item ">Produit numero <?= $c ?>  est : <?= $v?></li>
