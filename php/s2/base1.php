@@ -27,7 +27,6 @@ if($situation=="celibataire"){
 $politesse="Mlle.";
 }
 }
-
 //les tableaux  indexé: 
 $etudiant=["karimi","hajjoubi","omar",100];
   ?>
