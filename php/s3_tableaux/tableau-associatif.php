@@ -7,9 +7,7 @@ $mac =array("nom"=> "mac air","prix" => 8000,"ecran"=>"15 pouces",
 "config"=>"core i3", "ram"=>"8 GO RAM","dd"=>"500Go","2018")  ;
 $hp =array("nom"=> "hp dv6","prix" => 6000,"ecran"=>"15 pouces",
 "config"=>"core i3", "ram"=>"6GO RAM","dd"=>"400Go","2018")  ;
-
 $listeproduits=array($mac,$hp);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
